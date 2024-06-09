@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:paddingTop="32dp"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.login.LoginActivity">
+
+
+    <TextView
+        android:text="Hi There!"
+        android:fontFamily="@font/medium"
+        android:includeFontPadding="false"
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Please login to see your contact list"
+        android:fontFamily="@font/light"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Username"
+            android:fontFamily="@font/medium"
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="*"
+            android:fontFamily="@font/light"
+            android:textColor="@color/red"
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/et_background"
+        android:background="@drawable/ic_round_blue"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_account"
+            android:layout_width="32dp"
+            android:padding="4dp"
+            android:layout_height="24dp"
+            app:tint="@color/blue" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:hint="Username"
+            android:fontFamily="@font/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Password"
+            android:fontFamily="@font/medium"
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="*"
+            android:fontFamily="@font/light"
+            android:textColor="@color/red"
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/ic_round_blue"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/search"
+            app:srcCompat="@drawable/ic_email"
+            android:layout_width="32dp"
+            android:padding="4dp"
+            android:layout_height="22dp"
+            app:tint="@color/blue" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:inputType="textPassword"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:hint="Email"
+            android:fontFamily="@font/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:text="Error"
+        android:fontFamily="@font/light"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:includeFontPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:background="@drawable/ic_soft_blue"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/blue"
+        android:textSize="13sp"
+        android:text="Login"
+        android:fontFamily="@font/bold"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"/>
+        
+</LinearLayout>

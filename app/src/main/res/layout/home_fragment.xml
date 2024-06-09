@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="32dp"
+            android:layout_height="80dp">
+
+            <TextView
+                android:text="My Contacts"
+                android:includeFontPadding="false"
+                android:textSize="23sp"
+                android:fontFamily="@font/bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </Toolbar>
+
+        <LinearLayout
+            android:id="@+id/et_background"
+            android:background="@drawable/ic_round"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:hint="Search your contact list..."
+                android:fontFamily="@font/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/search"
+                app:srcCompat="@drawable/ic_search"
+                android:layout_width="24dp"
+                android:padding="4dp"
+                android:layout_height="36dp"/>
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:paddingTop="12dp"
+                android:paddingHorizontal="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:visibility="gone"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="Data not found"
+            android:fontFamily="@font/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>.
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="63dp"
+        android:padding="18dp"
+        android:background="@drawable/ic_oval"
+        app:srcCompat="@drawable/ic_add"
+        android:layout_height="63dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
